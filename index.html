@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A microphone-reactive pixel visualizer built with TypeScript and the Web Audio API.">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sound Pixels — Cassio Kiyoshi</title>
+  </head>
+  <body>
+    <header class="experiment-header">
+      <a href="https://cassiokiyoshi.github.io/profile/#playground">← Back to playground</a>
+      <p>Experiment 002</p>
+    </header>
+
+    <main>
+      <section class="introduction">
+        <p class="eyebrow">TypeScript · Web Audio</p>
+        <h1>Sound Pixels</h1>
+        <p>Turn sound into a field of color. Volume controls brightness, frequency controls hue, and beats briefly scramble the grid.</p>
+      </section>
+
+      <section class="visualizer" aria-labelledby="visualizer-title">
+        <div class="visualizer-heading">
+          <div>
+            <p class="eyebrow">Live signal</p>
+            <h2 id="visualizer-title">Pixel field</h2>
+          </div>
+          <p id="audio-status" aria-live="polite">Microphone is off</p>
+        </div>
+
+        <div class="controls">
+          <button id="microphone-button" type="button">Start microphone</button>
+          <label>
+            Sensitivity
+            <input id="sensitivity" type="range" min="0.5" max="3" value="1.4" step="0.1">
+          </label>
+        </div>
+
+        <canvas id="pixel-canvas" width="720" height="480" aria-label="Audio-reactive pixel visualization"></canvas>
+        <p class="instructions">Allow microphone access, then play music or make some noise.</p>
+      </section>
+    </main>
+
+    <script type="module" src="dist/app.js"></script>
+  </body>
+</html>
