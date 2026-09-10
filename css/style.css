@@ -20,7 +20,7 @@ body {
   line-height: 1.5;
 }
 button, a, input { color: inherit; font: inherit; }
-a { text-underline-offset: .25em; }
+a { text-decoration: none; }
 .experiment-header, main { width: min(calc(100% - 2rem), var(--max-width)); margin-inline: auto; }
 .experiment-header { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .experiment-header p { margin: 0; color: var(--muted); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
